@@ -1,0 +1,111 @@
+.profile-container {
+  position: relative;
+  max-width: 420px;
+  margin: 60px auto;
+  background-color: #ffffff;
+  padding: 35px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+}
+
+.profile-container:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.profile-container h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  color: #2c3e50;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.profile-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #2980b9, #3498db);
+  border-radius: 2px;
+}
+
+.profile-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #2c3e50;
+  background-color: #f7f9fa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container input:focus {
+  outline: none;
+  border-color: #2980b9;
+  box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.2);
+}
+
+.profile-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2980b9;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-container button:hover {
+  background-color: #3498db;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(52, 152, 219, 0.3);
+}
+
+.profile-container button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4);
+}
+
+.profile-container .avatar {
+  display: block;
+  margin: 0 auto 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: url('https://i.pravatar.cc/150') center/cover no-repeat;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container p.error-message {
+  color: #e74c3c;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 12px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
